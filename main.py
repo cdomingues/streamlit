@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.header('Home Page')
-st.success(' # Titulo *Secundário*')
+st.markdown(' # Titulo *Secundário*')
 
 dados = pd.read_csv('prof-dados-resumido.csv')
 st.write(dados)
@@ -15,4 +15,3 @@ st.table(dados.describe())
 
 plot = dados[var].value_counts().plot(kind='barh')
 st.pyplot(plot.figure)
-
