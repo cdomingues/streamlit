@@ -13,5 +13,5 @@ ms = dados['Salário'].groupby(dados[var]).mean().apply(lambda x: "{:_.2f}".form
 st.write    (ms) 
 st.table(dados.describe())
 
-plot = dados[var].value_counts().plot(kind='barh')
+plot = dados[var].value_counts().plot(kind='bar')
 st.pyplot(plot.figure)
